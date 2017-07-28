@@ -31,11 +31,49 @@
     </head>
     <body>
         <div class="app">
-            <h1>PhoneGap</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
+            <div data-role="page" id="pageone">
+	<div data-role="header">
+    <i class="fa fa-plus-square" style="font-size:48px;color:red"></i>  
+	<h1>Health-care Facilities Locator</h1>
+	</div>
+	<form>
+		<p>Select 
+				<select id="no" onchange="createSidebar();">
+				<option>2</option>
+				<option selected="selected">5</option>
+				<option>8</option>
+				<option>10</option>
+				<option>20</option>
+				<option>30</option>
+				<option>40</option>
+				<option>50</option>
+				<option>60</option>
+			</select> facilities near me</p>
+	</form>
+  <div data-role="main" class="ui-content">
+    <div id="content" class="table"></div>
+    <!-- <a href="#pagetwo">Go to Dialog Page</a> -->
+  </div>
+
+  <div data-role="footer">
+    <h1>Uasin Gishu County</h1>
+  </div>
+</div> 
+
+<div data-role="page" data-dialog="true" id="InfoWin">
+  <div data-role="header">
+    <h1>I'm A Dialog Box!</h1>
+  </div>
+
+  <div data-role="main" class="ui-content">
+    <p>The dialog box is different from a normal page, it is displayed on top of the current page and it will not span the entire width of the page. The dialog has also an icon of "X" in the header to close the box.</p>
+    <a href="#pageone">Go to Page One</a>
+  </div>
+
+  <div data-role="footer">
+    <h1>Uasin Gishu County</h1>
+  </div>
+</div> 
         </div>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
